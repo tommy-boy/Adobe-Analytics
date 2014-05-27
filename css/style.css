@@ -1,0 +1,302 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    list-style-type: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*begin our styles*/
+body {
+    color:#1c1c1c;
+    /*color:#666;
+    background:#111 no-repeat;
+    background-image:-moz-radial-gradient(center -100px 45deg, circle farthest-corner, #444 150px, #111 300px);
+    background-image:-webkit-gradient(radial, 50% 0, 150, 50% 0, 300, from(#444), to(#111));*/
+}
+main {
+	display: block
+}   
+p,ul {
+    margin: 0 0 1.5em;
+}
+ul {
+    list-style: disc;
+    padding: 0 0 0 20px;
+}
+a {
+    color: #1D745A;
+}
+h1 {
+}
+h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 32px;
+    line-height: 1.4em;
+    margin: 0 0 .4em;
+    font-weight: bold;
+}
+/*layout*/
+.wrapper {
+}
+article {
+    border-bottom: 1px solid #d8d8d8;
+    padding: 10px 20px 0 20px;
+    margin: 10px 0;
+}
+/*header*/
+header {
+    height: 20px;
+	right: 0;
+	left: 0;
+	background-color: #FFF;
+	border: none;
+	top: 0;
+	text-align: center;
+}
+/*shorter clearfix hack*/
+header:before,
+header:after {
+    content:"";
+    display:table;
+}
+header:after {
+    clear:both;
+}
+/*For IE 6/7 (trigger hasLayout)*/
+header {
+    zoom:1;
+}
+
+.header-main {
+position: relative;
+width: 100%;
+height: 50px;
+background: #FFF;
+border-bottom: 1px solid #d6d6d6;
+}
+
+.header-logo {
+background: #fff url(images/logo_sm@2x.png) 50% 50% no-repeat;
+position: relative;
+width: 300px;
+height: 100%;
+z-index: 9;
+margin: auto;
+display: block;
+}
+
+h1.logo a {
+    color: #d8d8d8;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 22px;
+    float: left;
+    letter-spacing: 0.2em;
+}
+a.top_nav {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 43px;
+	width: 64px;
+	margin-left: 12px;
+	z-index: 12;
+	background:url('images/threelines_sm.png') no-repeat;
+}
+
+a.to_nav:hover,
+a.to_nav:focus {
+    color: #1c1c1c;
+    background: #ccc;
+}
+
+.login_head {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 25px;
+	width: 36px;
+	margin-right: 12px;
+	margin-top: 12px;
+	background: #eee;
+	border: 1px solid #d4d4d4;
+	z-index: 12;
+}
+
+.login_head > .logged-out > a, .login_head > .logged-out > a:active, .login_head > .logged-out > a:visited {
+	background:url('images/logged-out.png') no-repeat;
+}
+
+.login_head>.login-link>a, .login_head>.login-link>a:active, .login_head>.login-link>a:visited {
+	text-indent: -1000px;
+	display: block;
+	overflow: hidden;
+	height: 25px;
+	width: 36px;
+	background: transparent none 50% 50% no-repeat;
+}
+
+
+/*navigation*/
+#primary_nav ul {
+    list-style: none;
+    background-color: #1c1c1c;
+    /*padding: 5px 0 0;*/
+}
+#primary_nav li a {
+    display: block;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+    height: 2em;
+    border-bottom: 1px solid #383838;
+    /*border: 1px solid #383838;*/
+    background-color: #111;
+    background-image: linear-gradient(#222, #111);
+    /*border-radius: 6px;
+    box-shadow: 0 1px 1px #777;*/
+}
+#primary_nav li:last-child a {
+    /*border-bottom: none;*/
+}
+#primary_nav li a:hover,
+#primary_nav li a:focus {
+    color: #1c1c1c;
+    background: #ccc;
+}
+#primary_nav li.top {
+    display: none;
+}
+
+/*footer*/
+
+.footer {
+	color: #323232;
+	text-align: center;
+	padding: 0 40px 40px;
+	font-size: 80%;
+	line-height: 35px;
+}
+
+.footer-dark {
+	color: #FFF;
+	padding: 50px 0;
+	margin: 0;
+}
+
+.footer-back-to-top {
+	color: #000;
+	display: inline-block;
+	font: 150% 'futura today bold',helvetica,Symbol,arial,sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	clear: both;
+	margin: 50px 0;
+}
+
+.footer-dark .footer-back-to-top {
+	padding: 0 0 50px;
+	color: #FFF;
+	margin: 0;
+}
+
+.ad-wrap-bottom, .footer-dark, .footer-dark .footer-back-to-top {
+	background: #F1F1F1 url('images/darknoise200.png') repeat top left;
+}
+
+.footer-list {
+	text-align: center;
+	margin: 0;
+	font-size: 100%;
+	line-height: 25px;
+	list-style-position: inside;
+	list-style-type: none;
+	padding: 0;
+}
+
+.footer-item {
+	display: inline;
+}
+
+.footer-dark .footer-item>a, .footer-media .footer-item>a {
+color: #FFF;
+}
+
+/*media queries
+@media only screen and (min-width: 768px) {
+    a.to_nav {
+        display: none;
+    }
+    .wrapper {
+        position: relative;
+        width: 768px;
+        margin: auto;
+    }
+    #primary_nav {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        background: none;
+    }
+    #primary_nav li {
+        display: inline;
+    }
+    #primary_nav li a {
+        float: left;
+        border: none;
+        padding: 0 10px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+    }
+}*/
